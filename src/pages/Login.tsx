@@ -90,7 +90,7 @@ const Login = () => {
             </div>
           </div>
           <p className="login-brand-footer">
-            © 2026 2S1M Rent Car — Premium Fleet Management
+            © 2026 Vektor Drive — Premium Fleet Management
           </p>
         </div>
 
@@ -151,6 +151,41 @@ const Login = () => {
               {loading ? <span className="login-spinner" /> : (mode === 'login' ? (isAr ? 'دخول' : 'Se connecter') : (isAr ? 'تسجيل' : 'S\'inscrire'))}
             </button>
 
+            <div style={{ display: 'flex', alignItems: 'center', margin: '16px 0', opacity: 0.6 }}>
+              <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.2)' }} />
+              <span style={{ margin: '0 10px', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px' }}>{isAr ? 'أو تجربة سريعة' : 'ou accès démo'}</span>
+              <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.2)' }} />
+            </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                setEmail('mouad@rentcar.com');
+                setPassword('x3z9Sm9sKE$m');
+                setTimeout(() => {
+                  const formEl = document.querySelector('form.login-form') as HTMLFormElement;
+                  if (formEl) formEl.requestSubmit();
+                }, 50);
+              }}
+              style={{
+                width: '100%',
+                padding: '12px',
+                background: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.4)',
+                borderRadius: '12px',
+                color: '#10B981',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                fontSize: '0.9rem',
+                transition: 'all 0.2s'
+              }}
+            >
+              <span>🚀 {isAr ? 'تجربة تفاعلية (بنقرة واحدة)' : 'Tester la Démo Interactive (1 Clic)'}</span>
+            </button>
           </form>
         </div>
       </div>

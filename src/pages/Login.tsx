@@ -160,6 +160,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => {
+                localStorage.setItem('vektor_active_schema', 'cliente_mouadrentcar');
                 setEmail('mouad@rentcar.com');
                 setPassword('x3z9Sm9sKE$m');
                 setTimeout(() => {

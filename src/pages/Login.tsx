@@ -16,7 +16,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const [mode, setMode] = useState<'login' | 'signup'>('login');
+  
 
   const toggleLang = () => {
     const nextLng = isAr ? 'fr' : 'ar';
@@ -97,7 +97,7 @@ const Login = () => {
         <div className="login-form-panel">
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="login-form-header">
-              <h2>{mode === 'login' ? (isAr ? 'تسجيل الدخول' : 'Connexion') : (isAr ? 'إنشاء حساب' : 'Créer un cuenta')}</h2>
+              <h2>{isAr ? 'تسجيل الدخول' : 'Connexion'}</h2>
               <p>{mode === 'login' 
                 ? (isAr ? 'أدخل بيانات الاعتماد الخاصة بك' : 'Entrez vos identifiants para acceder al sistema')
                 : (isAr ? 'قم بإنشاء حسابك الأول للبدء' : 'Créez votre premier compte pour commencer')}
